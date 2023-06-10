@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmkuarbx34go1"]
+
+[ext_resource type="Texture2D" uid="uid://djblfasgdde5n" path="res://baseAssets/testLevelMockup.png" id="1_51jk7"]
+[ext_resource type="PackedScene" uid="uid://bsg6705xur615" path="res://twilight-city/actors/players/brain.tscn" id="2_1s342"]
+[ext_resource type="PackedScene" uid="uid://h7jcphre6v5c" path="res://twilight-city/actors/players/brawn.tscn" id="3_5j8j0"]
+
+[node name="level0" type="Node2D"]
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Walls"]
+position = Vector2(575.986, 323.747)
+scale = Vector2(1.12307, 0.841804)
+texture = ExtResource("1_51jk7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls"]
+polygon = PackedVector2Array(-2, -1, 1151, 0, 1151, 648, 563, 649, 562, 637, 1140, 635, 1140, 225, 784, 223, 787, 189, 1140, 187, 1140, 13, 694, 15, 697, 372, 661, 372, 661, 16, 319, 16, 317, 222, 290, 222, 290, 15, 16, 15, 16, 196, 205, 195, 206, 224, 18, 223, 15, 449, 426, 450, 425, 469, 18, 467, 15, 637, 549, 637, 549, 648, 0, 646)
+
+[node name="brain" parent="." instance=ExtResource("2_1s342")]
+position = Vector2(578, 568)
+scale = Vector2(0.25, 0.25)
+
+[node name="brawn" parent="." instance=ExtResource("3_5j8j0")]
+position = Vector2(521, 564)
+scale = Vector2(0.33, 0.33)
