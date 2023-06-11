@@ -18,11 +18,14 @@ func _ready():
 	print(playerControl)
 
 #process for standard inputs, actually should probably change this to some kind of collider?
-func _process(delta):
+func _process(_delta):
 	_use(unitName)
+	if health == 0:
+		#gameover
+		get_tree().change_scene_to_file("res://twilight-city/scenes/menus/gameOver.tscn")
 
 #physics for movement
-func _physics_process(delta):
+func _physics_process(_delta):
 	##use delta for time based 
 	var xDirection = Input.get_axis(playerControl+"_left", playerControl+"_right")
 	if xDirection:

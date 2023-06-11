@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://byq61qtfrn4s6"]
+
+[node name="Game Over Screen" type="CanvasLayer"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+modulate = Color(0.976471, 0.976471, 0.976471, 0.643137)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -578.0
+offset_top = -324.0
+offset_right = 574.0
+offset_bottom = 321.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="rows" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 120
+
+[node name="title" type="Label" parent="PanelContainer/MarginContainer/rows"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.235294, 0.235294, 0.235294, 1)
+text = "Mission Failed"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="restartLevel" type="Button" parent="PanelContainer/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart Level"
+
+[node name="mainMenu" type="Button" parent="PanelContainer/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Main Menu"
